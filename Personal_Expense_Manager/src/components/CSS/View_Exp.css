@@ -1,0 +1,188 @@
+.main_Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 80px;
+}
+
+.expense-list-container {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 80px;
+    max-height: 700px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.expense-list-container:hover {
+    box-shadow: 0px 0px 30px rgb(8, 236, 0);
+    border: 1px solid white;
+}
+
+.expense-list-container h2 {
+    color: rgb(2, 187, 2);
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.expense-list {
+    list-style-type: none;
+    padding: 0;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.expense-list li {
+    background: #f4f4f4;
+    margin: 5px 0;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow-x: scroll;
+}
+
+.expense-list li:hover {
+    background-color: #e1f7e1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.expense-list span {
+    padding: 5px 15px;
+    background-color: red;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid rgb(255, 0, 0);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.expense-list span:hover {
+    background-color: rgb(138, 28, 28);
+    border: 1px solid white;
+    transform: scale(1.05);
+}
+
+.expense-list li strong {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
+    width: auto;
+    text-align: left;
+
+    text-align: right;
+}
+
+.expense-list li small {
+    font-size: 15px;
+    color: #666;
+    display: block;
+    width: 500px;
+}
+
+.filters {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.filters select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filters select:hover {
+    background-color: #f1f1f1;
+    border-color: #00b300;
+}
+
+.expense-list-container h3 {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+    background-color: #00cc0a;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.expense-list li {
+    color: #e74c3c;
+    font-weight: bold;
+    text-align: center;
+}
+@media screen and (max-width: 700px) {
+
+    .expense-list-container {
+        width: 100%;
+        max-width: 500px;
+
+
+    }
+
+}
+@media screen and (max-width: 600px) {
+
+    .expense-list-container {
+        width: 100%;
+        max-width: 400px;
+
+
+    }
+
+}
+@media screen and (max-width: 500px) {
+
+    .expense-list-container {
+        width: 100%;
+        max-width: 300px;
+
+
+    }
+    .expense-list li {
+        flex-direction: column;
+    }
+    .expense-list li strong {
+        font-size: 17px;
+        font-weight: bold;
+        margin-left: 1px;
+    }
+    .expense-list span {
+        padding: 2px 15px;
+        background-color: red;
+        border-radius: 5px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+        border: 1px solid rgb(255, 0, 0);
+        cursor: pointer;
+        transition: all 0.3sease;
+        margin-top: 12px;
+    }
+
+}
